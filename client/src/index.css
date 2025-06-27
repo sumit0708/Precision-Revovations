@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 13%, 18%);
+  --muted: hsl(220, 14.3%, 95.9%);
+  --muted-foreground: hsl(220, 8.9%, 46.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 13%, 18%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 13%, 18%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(220, 14.3%, 95.9%);
+  --secondary-foreground: hsl(220, 9%, 46%);
+  --accent: hsl(220, 14.3%, 95.9%);
+  --accent-foreground: hsl(220, 9%, 46%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(217, 91%, 60%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for construction theme */
+  --construction-primary: hsl(217, 91%, 60%);
+  --construction-secondary: hsl(220, 13%, 18%);
+  --construction-accent: hsl(45, 93%, 47%);
+  --construction-neutral: hsl(220, 20%, 97%);
+  --construction-text: hsl(220, 9%, 46%);
+}
+
+.dark {
+  --background: hsl(220, 13%, 3%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(220, 13%, 15%);
+  --muted-foreground: hsl(220, 8.9%, 64.9%);
+  --popover: hsl(220, 13%, 3%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(220, 13%, 3%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(220, 13%, 15%);
+  --input: hsl(220, 13%, 15%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(220, 13%, 15%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(220, 13%, 15%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(217, 91%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-construction-primary {
+    color: var(--construction-primary);
+  }
+  
+  .text-construction-secondary {
+    color: var(--construction-secondary);
+  }
+  
+  .text-construction-accent {
+    color: var(--construction-accent);
+  }
+  
+  .text-construction-text {
+    color: var(--construction-text);
+  }
+  
+  .bg-construction-primary {
+    background-color: var(--construction-primary);
+  }
+  
+  .bg-construction-secondary {
+    background-color: var(--construction-secondary);
+  }
+  
+  .bg-construction-neutral {
+    background-color: var(--construction-neutral);
+  }
+}
